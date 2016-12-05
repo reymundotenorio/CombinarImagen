@@ -281,7 +281,7 @@ public class Ventana extends javax.swing.JFrame {
     public void Iniciar() throws IOException {
         BufferedImage largeI = null;
 
-        largeI = ImageIO.read(new File("Body.gif"));
+        largeI = ImageIO.read(new File("img/Body.gif"));
 
         BufferedImage combinedI = new BufferedImage(largeI.getWidth(), largeI.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
@@ -289,7 +289,7 @@ public class Ventana extends javax.swing.JFrame {
         Graphics g = combinedI.getGraphics();
         g.drawImage(largeI, 0, 0, null);
 
-        ImageIO.write(combinedI, "PNG", new File("Body.png"));
+        ImageIO.write(combinedI, "PNG", new File("img/Body.png"));
 
         ImageIcon icon1 = new ImageIcon(combinedI);
         lblCuerpo.setIcon(icon1);
@@ -299,7 +299,7 @@ public class Ventana extends javax.swing.JFrame {
 
         BufferedImage Body = null;
 
-        Body = ImageIO.read(new File("Body.gif"));
+        Body = ImageIO.read(new File("img/Body.gif"));
 
         BufferedImage Cabeza = null, Cuello = null, Hombros = null, Brazos = null,
                 Codos = null, Manos = null, Pecho = null, Estomago = null, Espalda = null,
@@ -317,57 +317,57 @@ public class Ventana extends javax.swing.JFrame {
 //        }
 //        
         if (ckCabeza.isSelected()) {
-            Cabeza = ImageIO.read(new File("Cabeza.gif"));
+            Cabeza = ImageIO.read(new File("img/Cabeza.gif"));
             g.drawImage(Cabeza, 0, 0, null);
         }
         if (ckCuello.isSelected()) {
-            Cuello = ImageIO.read(new File("Cuello.gif"));
+            Cuello = ImageIO.read(new File("img/Cuello.gif"));
             g.drawImage(Cuello, 0, 0, null);
         }
         if (ckHombros.isSelected()) {
-            Hombros = ImageIO.read(new File("Hombros.gif"));
+            Hombros = ImageIO.read(new File("img/Hombros.gif"));
             g.drawImage(Hombros, 0, 0, null);
         }
         if (ckBrazos.isSelected()) {
-            Brazos = ImageIO.read(new File("Brazos.gif"));
+            Brazos = ImageIO.read(new File("img/Brazos.gif"));
             g.drawImage(Brazos, 0, 0, null);
         }
         if (ckCodos.isSelected()) {
-            Codos = ImageIO.read(new File("Codos.gif"));
+            Codos = ImageIO.read(new File("img/Codos.gif"));
             g.drawImage(Codos, 0, 0, null);
         }
         if (ckManos.isSelected()) {
-            Manos = ImageIO.read(new File("Manos.gif"));
+            Manos = ImageIO.read(new File("img/Manos.gif"));
             g.drawImage(Manos, 0, 0, null);
         }
         if (ckPecho.isSelected()) {
-            Pecho = ImageIO.read(new File("Pecho.gif"));
+            Pecho = ImageIO.read(new File("img/Pecho.gif"));
             g.drawImage(Pecho, 0, 0, null);
         }
         if (ckEstomago.isSelected()) {
-            Estomago = ImageIO.read(new File("Estomago.gif"));
+            Estomago = ImageIO.read(new File("img/Estomago.gif"));
             g.drawImage(Estomago, 0, 0, null);
         }
         if (ckEspalda.isSelected()) {
-            Espalda = ImageIO.read(new File("Espalda.gif"));
+            Espalda = ImageIO.read(new File("img/Espalda.gif"));
             g.drawImage(Espalda, 0, 0, null);
         }
         if (ckPiernas.isSelected()) {
-            Piernas = ImageIO.read(new File("Piernas.gif"));
+            Piernas = ImageIO.read(new File("img/Piernas.gif"));
             g.drawImage(Piernas, 0, 0, null);
         }
         if (ckRodillas.isSelected()) {
-            Rodillas = ImageIO.read(new File("Rodillas.gif"));
+            Rodillas = ImageIO.read(new File("img/Rodillas.gif"));
             g.drawImage(Rodillas, 0, 0, null);
         }
         if (ckPies.isSelected()) {
-            Pies = ImageIO.read(new File("Pies.gif"));
+            Pies = ImageIO.read(new File("img/Pies.gif"));
             g.drawImage(Pies, 0, 0, null);
         }
 
         g.drawImage(Body, 0, 0, null);
 
-        ImageIO.write(combined, "PNG", new File("AllinOne.png"));
+        ImageIO.write(combined, "PNG", new File("img/AllinOne.png"));
 
         ImageIcon icon1 = new ImageIcon(combined);
         lblCuerpo.setIcon(icon1);
@@ -403,6 +403,7 @@ public class Ventana extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Ventana().setVisible(true);
             }
